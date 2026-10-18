@@ -1,0 +1,8 @@
+{
+  "name": "SAMT",
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+  "postCreateCommand": "sudo apt-get update && sudo apt-get install -y wget unzip libfontconfig1 libxkbcommon0 libdbus-1-3 && wget -q https://github.com/godotengine/godot/releases/download/4.3-stable/Godot_v4.3-stable_linux.x86_64.zip -O /tmp/godot.zip && sudo unzip -o /tmp/godot.zip -d /usr/local/bin && sudo mv /usr/local/bin/Godot_v4.3-stable_linux.x86_64 /usr/local/bin/godot && sudo chmod +x /usr/local/bin/godot && godot --headless --version && cd . && godot --headless --script tests/run_tests.gd",
+  "customizations": {
+    "vscode": { "extensions": ["geequlim.godot-tools"] }
+  }
+}
